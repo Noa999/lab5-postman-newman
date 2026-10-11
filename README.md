@@ -39,7 +39,14 @@ results/newman-pass.txt-ийн дагуу: 16 Requests (16 Passed), 21 Tests (21
 
 ## 4. PASS / FAIL / DOWN ажиллуулалт
 
+**PASS** (lab05-collection/): 16 Requests (16 Passed), 21/21 Tests, exit code 0.
+Файл: results/newman-pass.txt
 
+**FAIL** (lab05-collection-fail/): "Register - Happy Path" тестийн oracle-ыг
+санаатайгаар 201→200 болгож эвдсэн. Үр дүн: 16 Requests (15 Passed, 1 Failed),
+19/20 Tests, exit code 1. k6/CI-ийн adил зарчмаар, threshold эсвэл тест
+зөрвөл build/deploy зогсох ёстойг харуулж байна (quality gate).
+Файл: results/newman-fail.txt
 
 ## 5. Дүгнэлт
 
