@@ -1,0 +1,16 @@
+info:
+  name: Setup - Inactive Student
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/students/B222222222"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
