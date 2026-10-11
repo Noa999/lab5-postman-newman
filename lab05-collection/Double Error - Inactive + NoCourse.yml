@@ -6,7 +6,21 @@ info:
 http:
   method: POST
   url: "{{baseUrl}}/registrations"
+  body:
+    type: json
+    data: '{"studentID":"B222222222","courseID":"CS999"}'
   auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("status 200 байна", function() {
+          expect(res.getStatus()).to.equal(200);
+        });
+        test("result нь ERROR_INACTIVE_STUDENT байна (status эрт шалгагддаг)", function() {
+          expect(res.getBody().result).to.equal("ERROR_INACTIVE_STUDENT");
+        });
 
 settings:
   encodeUrl: true

@@ -1,0 +1,62 @@
+Setup - Create Student (200 OK) - 14 ms
+Setup - Create Course (200 OK) - 3 ms
+Register - Happy Path (201 Created) - 2 ms
+Tests
+   ✓ status 201 байна
+   ✓ result нь OK байна
+No Student - ERROR_NO_STUDENT (200 OK) - 2 ms
+Tests
+   ✓ status 200 байна
+   ✓ result нь ERROR_NO_STUDENT байна
+Setup - Inactive Student (200 OK) - 2 ms
+Inactive Student - ERROR_INACTIVE_STUDENT (200 OK) - 2 ms
+Tests
+   ✓ status 200 байна
+   ✓ result нь ERROR_INACTIVE_STUDENT байна
+No Course - ERROR_NO_COURSE (200 OK) - 1 ms
+Tests
+   ✓ status 200 байна
+   ✓ result нь ERROR_NO_COURSE байна
+Setup - Student No Prereq (200 OK) - 1 ms
+Missing Prerequisites - ERROR_PREREQUISITES (200 OK) - 3 ms
+Tests
+   ✓ status 200 байна
+   ✓ result нь ERROR_PREREQUISITES байна
+   ✓ missing массивт CS201 байна
+Missing StudentID - ERROR_BAD_REQUEST (400 Bad Request) - 2 ms
+Tests
+   ✓ status 400 байна
+   ✓ result нь ERROR_BAD_REQUEST байна
+Missing CourseID - ERROR_BAD_REQUEST (400 Bad Request) - 1 ms
+Tests
+   ✓ status 400 байна
+   ✓ result нь ERROR_BAD_REQUEST байна
+Bad JSON - ERROR_BAD_JSON (400 Bad Request) - 2 ms
+Tests
+   ✓ status 400 байна
+   ✓ result нь ERROR_BAD_JSON байна
+Double Error - Inactive + NoCourse (200 OK) - 1 ms
+Tests
+   ✓ status 200 байна
+   ✓ result нь ERROR_INACTIVE_STUDENT байна (status эрт шалгагддаг)
+Setup - Student Empty Courses (200 OK) - 1 ms
+Setup - Course No Prereq (200 OK) - 1 ms
+Boundary - Empty Prerequisites Success (201 Created) - 1 ms
+Tests
+   ✓ status 201 байна
+   ✓ result нь OK байна
+
+📊 Execution Summary
+┌───────────────┬────────────────┐
+│ Metric        │     Result     │
+├───────────────┼────────────────┤
+│ Status        │     ✓ PASS     │
+├───────────────┼────────────────┤
+│ Requests      │ 16 (16 Passed) │
+├───────────────┼────────────────┤
+│ Tests         │     21/21      │
+├───────────────┼────────────────┤
+│ Assertions    │      0/0       │
+├───────────────┼────────────────┤
+│ Duration (ms) │      761       │
+└───────────────┴────────────────┘

@@ -6,7 +6,21 @@ info:
 http:
   method: POST
   url: "{{baseUrl}}/registrations"
+  body:
+    type: json
+    data: '{"studentID":"B444444444","courseID":"CS101"}'
   auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("status 201 байна", function() {
+          expect(res.getStatus()).to.equal(201);
+        });
+        test("result нь OK байна", function() {
+          expect(res.getBody().result).to.equal("OK");
+        });
 
 settings:
   encodeUrl: true

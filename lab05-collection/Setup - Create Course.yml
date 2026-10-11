@@ -6,6 +6,9 @@ info:
 http:
   method: PUT
   url: "{{baseUrl}}/courses/CS313"
+  body:
+    type: json
+    data: '{"prerequisites":["CS201"]}'
   auth: inherit
 
 settings:

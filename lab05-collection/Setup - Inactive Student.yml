@@ -6,6 +6,9 @@ info:
 http:
   method: PUT
   url: "{{baseUrl}}/students/B222222222"
+  body:
+    type: json
+    data: '{"status":"inactive","coursesTaken":[]}'
   auth: inherit
 
 settings:
