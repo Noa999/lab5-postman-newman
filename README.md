@@ -48,6 +48,17 @@ results/newman-pass.txt-ийн дагуу: 16 Requests (16 Passed), 21 Tests (21
 зөрвөл build/deploy зогсох ёстойг харуулж байна (quality gate).
 Файл: results/newman-fail.txt
 
+**DOWN** (сервер унтраасан үед): node server.js процессыг Ctrl+C-ээр зогсоогоод
+lab05-collection/-ийг дахин ажиллуулахад бүх 16 хүсэлт "connect ECONNREFUSED
+127.0.0.1:3000" алдаатай буцсан. Exit code 1. Файл: results/newman-down.txt
+
+**Ялгаа — интерфейсийн алдаа vs oracle-ийн алдаа:** DOWN тохиолдолд серверт
+огт хүрч чадаагүй тул энэ бол сүлжээ/холболтын (interface) алдаа — манай
+API-гийн логикт (oracle) ямар ч хамаагүй. Харин FAIL тохиолдолд сервер хариу
+өгсөн ч бидний хүлээж байсан утга (oracle) буруу байсан — энэ бол логикийн
+алдаа. Хоёр нь өөр шалтгаантай ч аль алинд нь CI pipeline зогсох ёстой
+(exit code ≠ 0).
+
 ## 5. Дүгнэлт
 
 
