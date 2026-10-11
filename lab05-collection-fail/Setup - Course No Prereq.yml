@@ -1,0 +1,19 @@
+info:
+  name: Setup - Course No Prereq
+  type: http
+  seq: 15
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/courses/CS101"
+  body:
+    type: json
+    data: '{"prerequisites":[]}'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

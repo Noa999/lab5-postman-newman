@@ -1,0 +1,33 @@
+info:
+  name: Missing Prerequisites - ERROR_PREREQUISITES
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseUrl}}/registrations"
+  body:
+    type: json
+    data: '{"studentID":"B333333333","courseID":"CS313"}'
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("status 200 байна", function() {
+          expect(res.getStatus()).to.equal(200);
+        });
+        test("result нь ERROR_PREREQUISITES байна", function() {
+          expect(res.getBody().result).to.equal("ERROR_PREREQUISITES");
+        });
+        test("missing массивт CS201 байна", function() {
+          expect(res.getBody().missing).to.include("CS201");
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

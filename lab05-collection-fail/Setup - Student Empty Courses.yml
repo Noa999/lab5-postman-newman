@@ -1,0 +1,19 @@
+info:
+  name: Setup - Student Empty Courses
+  type: http
+  seq: 14
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/students/B444444444"
+  body:
+    type: json
+    data: '{"status":"active","coursesTaken":[]}'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
