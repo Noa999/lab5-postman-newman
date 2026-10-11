@@ -16,7 +16,7 @@ runtime:
     - type: tests
       code: |-
         test("status 201 байна", function() {
-          expect(res.getStatus()).to.equal(200);  // ← 201-ийг 200 болгов (санаатай алдаа)
+          expect(res.getStatus()).to.equal(201);
         });
 
 settings:

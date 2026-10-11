@@ -1,10 +1,9 @@
-Setup - Create Student (200 OK) - 17 ms
+Setup - Create Student (200 OK) - 11 ms
 Setup - Create Course (200 OK) - 3 ms
 Register - Happy Path (201 Created) - 1 ms
 Tests
-   ✕ status 201 байна
-      expected 201 to equal 200
-No Student - ERROR_NO_STUDENT (200 OK) - 2 ms
+   ✓ status 201 байна
+No Student - ERROR_NO_STUDENT (200 OK) - 1 ms
 Tests
    ✓ status 200 байна
    ✓ result нь ERROR_NO_STUDENT байна
@@ -17,7 +16,7 @@ No Course - ERROR_NO_COURSE (200 OK) - 1 ms
 Tests
    ✓ status 200 байна
    ✓ result нь ERROR_NO_COURSE байна
-Setup - Student No Prereq (200 OK) - 1 ms
+Setup - Student No Prereq (200 OK) - 2 ms
 Missing Prerequisites - ERROR_PREREQUISITES (200 OK) - 2 ms
 Tests
    ✓ status 200 байна
@@ -41,27 +40,27 @@ Tests
    ✓ result нь ERROR_INACTIVE_STUDENT байна (status эрт шалгагддаг)
 Setup - Student Empty Courses (200 OK) - 1 ms
 Setup - Course No Prereq (200 OK) - 1 ms
-Boundary - Empty Prerequisites Success (201 Created) - 1 ms
+Boundary - Empty Prerequisites Success (201 Created) - 2 ms
 Tests
    ✓ status 201 байна
    ✓ result нь OK байна
-Public API - jsonplaceholder Users (200 OK) - 106 ms
+Public API - jsonplaceholder Users (200 OK) - 100 ms
 Tests
    ✓ status 200 байна
    ✓ хариу массив байна
    ✓ эхний хэрэглэгчийн нэр зөв байна
 
 📊 Execution Summary
-┌───────────────┬──────────────────────────┐
-│ Metric        │          Result          │
-├───────────────┼──────────────────────────┤
-│ Status        │          ✗ FAIL          │
-├───────────────┼──────────────────────────┤
-│ Requests      │ 17 (16 Passed, 1 Failed) │
-├───────────────┼──────────────────────────┤
-│ Tests         │          22/23           │
-├───────────────┼──────────────────────────┤
-│ Assertions    │           0/0            │
-├───────────────┼──────────────────────────┤
-│ Duration (ms) │           954            │
-└───────────────┴──────────────────────────┘
+┌───────────────┬────────────────┐
+│ Metric        │     Result     │
+├───────────────┼────────────────┤
+│ Status        │     ✓ PASS     │
+├───────────────┼────────────────┤
+│ Requests      │ 17 (17 Passed) │
+├───────────────┼────────────────┤
+│ Tests         │     23/23      │
+├───────────────┼────────────────┤
+│ Assertions    │      0/0       │
+├───────────────┼────────────────┤
+│ Duration (ms) │      932       │
+└───────────────┴────────────────┘
