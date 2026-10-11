@@ -1,0 +1,31 @@
+Setup - Create Student (connect ECONNREFUSED 127.0.0.1:3000)
+Setup - Create Course (connect ECONNREFUSED 127.0.0.1:3000)
+Register - Happy Path (connect ECONNREFUSED 127.0.0.1:3000)
+No Student - ERROR_NO_STUDENT (connect ECONNREFUSED 127.0.0.1:3000)
+Setup - Inactive Student (connect ECONNREFUSED 127.0.0.1:3000)
+Inactive Student - ERROR_INACTIVE_STUDENT (connect ECONNREFUSED 127.0.0.1:3000)
+No Course - ERROR_NO_COURSE (connect ECONNREFUSED 127.0.0.1:3000)
+Setup - Student No Prereq (connect ECONNREFUSED 127.0.0.1:3000)
+Missing Prerequisites - ERROR_PREREQUISITES (connect ECONNREFUSED 127.0.0.1:3000)
+Missing StudentID - ERROR_BAD_REQUEST (connect ECONNREFUSED 127.0.0.1:3000)
+Missing CourseID - ERROR_BAD_REQUEST (connect ECONNREFUSED 127.0.0.1:3000)
+Bad JSON - ERROR_BAD_JSON (connect ECONNREFUSED 127.0.0.1:3000)
+Double Error - Inactive + NoCourse (connect ECONNREFUSED 127.0.0.1:3000)
+Setup - Student Empty Courses (connect ECONNREFUSED 127.0.0.1:3000)
+Setup - Course No Prereq (connect ECONNREFUSED 127.0.0.1:3000)
+Boundary - Empty Prerequisites Success (connect ECONNREFUSED 127.0.0.1:3000)
+
+📊 Execution Summary
+┌───────────────┬────────────────┐
+│ Metric        │     Result     │
+├───────────────┼────────────────┤
+│ Status        │     ✗ FAIL     │
+├───────────────┼────────────────┤
+│ Requests      │ 16 (16 Failed) │
+├───────────────┼────────────────┤
+│ Tests         │      0/0       │
+├───────────────┼────────────────┤
+│ Assertions    │      0/0       │
+├───────────────┼────────────────┤
+│ Duration (ms) │       74       │
+└───────────────┴────────────────┘
