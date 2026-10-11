@@ -35,7 +35,7 @@ bru --version: 4.2.1
 
 ## 3. Тестийн тоо
 
-
+results/newman-pass.txt-ийн дагуу: 16 Requests (16 Passed), 21 Tests (21/21 Passed), exit code 0.
 
 ## 4. PASS / FAIL / DOWN ажиллуулалт
 
